@@ -20,6 +20,7 @@ app.mount("#app");
 // app.use(router);
 
 // app.mount("#app");
+
 //swiper
 const swiper = new Swiper('.swiper', {
     // Optional parameters

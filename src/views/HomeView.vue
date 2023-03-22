@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
 
+
 </head>
 <body>
   
@@ -524,13 +525,13 @@
             </div>
         </div>
     </section>
-    
-    
+    <component is="script" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"  async></component>
+    <component is="script" src="../js/swiper" async></component>
 </body>
 </html>
 </template>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+<!-- <script src=""></script> -->
 <!-- <script src="../js/swiper"></script> -->
 <style lang="scss">
 
