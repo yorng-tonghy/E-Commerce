@@ -68,10 +68,16 @@
         flex-direction: column;
         .app{
             color: white;
+            &:hover{
+                color: yellowgreen;
+            }
 
         }
         .app_desc{
             color: white;
+            &:hover{
+                color: yellowgreen;
+            }
         }
         .app_box_wrapper{
             margin-top: 1rem;
