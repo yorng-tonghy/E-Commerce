@@ -33,6 +33,9 @@
                 a{
                     text-decoration: none;
                     color: black;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
                 }
             }
         }
@@ -52,6 +55,10 @@
                     height: 75%;
                     object-fit: cover;
                     transform: rotate(-35deg);
+                    transition: 1.2s;
+                    &:hover{
+                        transform: rotate(0deg);
+                    }
                 }
             }
         }
