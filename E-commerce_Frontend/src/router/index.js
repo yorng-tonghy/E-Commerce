@@ -35,6 +35,7 @@ const router = createRouter({
       path:"/landing",
       component:()=> import("../views/LandingPage.vue"),
     }
+    
   ],
 });
 

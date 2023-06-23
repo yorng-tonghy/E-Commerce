@@ -28,12 +28,18 @@
                       <li>
                         <a href="#"><router-link to="/">Home</router-link></a>
                       </li>
-                      <li>
+                      <!-- <li>
                           <a href="#"><router-link to="./Checkout.vue">Shop</router-link></a>
                       </li><li>
                           <a href="#"><router-link to="./Checkout.vue">Blog</router-link></a>
                       </li><li>
                           <a href="#"><router-link to="./AboutView.vue">About</router-link></a>
+                      </li> -->
+                      <li>
+                        <a href="#"><router-link to="/landing">Landing</router-link></a>
+                      </li>
+                      <li>
+                        <a href="#"><router-link to="/detail">Detail</router-link></a>
                       </li>
                      
   
