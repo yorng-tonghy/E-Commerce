@@ -36,7 +36,7 @@
                           <a href="#"><router-link to="./AboutView.vue">About</router-link></a>
                       </li> -->
                       <li>
-                          <a href="#"><router-link to="./AboutView.vue">Landing</router-link></a>
+                          <a href="#"><router-link to="/landing">Landing</router-link></a>
                       </li>
                       <li>
                         <a href="#"><router-link to="/detail">Detail</router-link></a>
@@ -62,7 +62,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nisi cupiditate, sunt veritatis repellendus iure tempora omnis, labore dolor aut eum necessitatibus tenetur voluptatibus corrupti quisquam neque ipsa nam molestias!</p>
             </div>
             <div class="image">
-                <img src="../assets/img/image 16.png" alt="">
+                <!-- <img src="../assets/img/image 16.png" alt=""> -->
             </div>
             <div class="signup_button">
                 <a href="#">Sign Up</a>
@@ -96,31 +96,31 @@
             <div class="wrapperBox 1">
                 <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <img src="../assets/img/Rectangle 94.png" alt="">
+                <!-- <img src="../assets/img/Rectangle 94.png" alt=""> -->
                 <p>Jannie Suffer</p>
             </div>
             <div class="wrapperBox 2">
                 <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <img src="../assets/img/Rectangle 94.png" alt="">
+                <!-- <img src="../assets/img/Rectangle 94.png" alt=""> -->
                 <p>Jannie Suffer</p>
             </div>
             <div class="wrapperBox 3">
                 <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <img src="../assets/img/Rectangle 94.png" alt="">
+                <!-- <img src="../assets/img/Rectangle 94.png" alt=""> -->
                 <p>Jannie Suffer</p>
             </div>
             <div class="wrapperBox 4">
                 <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <img src="../assets/img/Rectangle 94.png" alt="">
+                <!-- <img src="../assets/img/Rectangle 94.png" alt=""> -->
                 <p>Jannie Suffer</p>
             </div>
         </div>
      </div>
      <!-- advertise -->
-     <div class="advertise_section">
+     <!-- <div class="advertise_section">
         <div class="advertise_wrapper">
             <div class="advertise_left">
                 <h3>What it's like </h3>
@@ -133,7 +133,7 @@
                 <iframe src="https://www.youtube.com" frameborder="1"></iframe>
             </div>
         </div>
-     </div>
+     </div> -->
       <!-- -------footer section------ -->
       <section class="footer__section">
           <div class="footer__wrapper">

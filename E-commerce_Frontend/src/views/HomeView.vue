@@ -261,8 +261,8 @@
               </div>
           </div>
       </section>
-      <component is="script" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"  async></component>
-      <component is="script" src="../js/swiper" async></component>
+      <!-- <component is="script" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"  async></component>
+      <component is="script" src="../js/swiper" async></component> -->
   </body>
   </html>
   </template>
