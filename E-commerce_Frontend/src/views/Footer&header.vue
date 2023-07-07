@@ -26,7 +26,7 @@
               <div class="header__nav_item">
                   <ul>
                       <li>
-                        <a href="#"><router-link to="/">Home</router-link></a>
+                          <a href="#"><router-link to="/">Home</router-link></a>
                       </li>
                       <!-- <li>
                           <a href="#"><router-link to="./Checkout.vue">Shop</router-link></a>
@@ -41,35 +41,16 @@
                       <li>
                         <a href="#"><router-link to="/detail">Detail</router-link></a>
                       </li>
-                      <li>
-                        <a href="#"><router-link to="/contact">Contact</router-link></a>
-                      </li>
+                     
   
                   </ul>
               </div>
               <div class="header__cart">
-                <router-link to="/cart"><i class='bx bxs-cart'></i></router-link>
+                  <i class='bx bxs-cart'></i>
               </div>
           </div>
       </section>
-      <!-------- body Section  ---------->
-      <div class="login_wrapper">
-        <h1>Login</h1>
-        <p>Dont' have an account?</p>
-        <p><a href="#">Sign Up Free</a></p>
-        
-            <div class="box_login">
-                <label for="email">Email:</label>
-                <input type="email"><br>
-                <label for="password">Password:</label>
-                <input type="password">
-                <a href="#">Forget Password?</a>
-                <button type="submit" value="submit">Login</button>
-            </div>
-      </div>
-            
      
-
 
       <!-- -------footer section------ -->
       <section class="footer__section">
@@ -154,58 +135,6 @@
   
   </template>
   
-  <style>
-  @media (min-width: 1024px) {
-    .about {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-  }
-  .login_wrapper{
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-
-  }
-  .login_wrapper h1{
-    margin-top: 5rem;
-  }
-  .box_login{
-    margin-top: 1rem;
-    /* background-color: black; */
-    color: black;
-    width: 30rem;
-    height: 20rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    display: flex;
-    align-items: center;
-    flex-direction: column ;
-    margin: auto;
-    
-  }
-  input{
-    padding: .5rem;
-    width: 15rem;
-  }
-  label{
-    margin-top: 1rem;
-  }
-  button{
-    margin-top: 1rem;
-    padding: 1rem;
-
-  }
-  button:hover{
-    background: white;
-    color: red;
-  }
-  a{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  
-  </style>
+ <style lang="scss">
+ 
+</style>

@@ -26,7 +26,7 @@
               <div class="header__nav_item">
                   <ul>
                       <li>
-                        <a href="#"><router-link to="/">Home</router-link></a>
+                          <a href="#"><router-link to="/">Home</router-link></a>
                       </li>
                       <!-- <li>
                           <a href="#"><router-link to="./Checkout.vue">Shop</router-link></a>
@@ -44,32 +44,45 @@
                       <li>
                         <a href="#"><router-link to="/contact">Contact</router-link></a>
                       </li>
+                     
   
                   </ul>
               </div>
               <div class="header__cart">
-                <router-link to="/cart"><i class='bx bxs-cart'></i></router-link>
+                  <i class='bx bxs-cart'></i>
               </div>
           </div>
       </section>
-      <!-------- body Section  ---------->
-      <div class="login_wrapper">
-        <h1>Login</h1>
-        <p>Dont' have an account?</p>
-        <p><a href="#">Sign Up Free</a></p>
-        
-            <div class="box_login">
-                <label for="email">Email:</label>
-                <input type="email"><br>
-                <label for="password">Password:</label>
-                <input type="password">
-                <a href="#">Forget Password?</a>
-                <button type="submit" value="submit">Login</button>
+      <!-- contact -->
+      <div class="contact">
+        <div class="contact_wrapper">
+            <div class="contact_title">
+                <p>Contact Form</p>
             </div>
-      </div>
-            
-     
+            <div class="contact_desc">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo accusamus dolor explicabo sint. Asperiores totam architecto harum? Quis minus eos, exercitationem quibusdam quaerat accusantium, suscipit dolorum quos animi repellendus illo.</p>
+            </div>
+            <div class="name_email">
+                <input type="name" placeholder="NAME">
+                <input type="email" placeholder="EMAIL">
+            </div>
+            <div class="telephone">
+                <input type="phone" placeholder="TELEPHONE">
+            </div>
+            <div class="message">
+                <input type="text" placeholder="MESSAGE">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox">
+                <p>I accept Bio's Privacy Policy</p>
+            </div>
+            <div class="button_send">
+                <a href="">Send Message</a>
+            </div>
+        </div>
 
+      </div>
+     
 
       <!-- -------footer section------ -->
       <section class="footer__section">
@@ -154,58 +167,76 @@
   
   </template>
   
-  <style>
-  @media (min-width: 1024px) {
-    .about {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
+ <style lang="scss">
+    .contact{
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        // align-items: center;
+        // border: 1px solid black;
+        height: 100vh;
+        .contact_wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // border: 1px solid black;
+            flex-direction: column;
+            .contact_title{
+                font-size: 2rem;
+            }
+            .contact_desc{
+                // border: 1px solid black;
+                width: 50%;
+            }
+            .name_email{
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+                gap: .5rem;
+                input{
+                    border: 1px solid black;
+                    padding: .5rem;
+                }
+            }
+            .telephone{
+                input{
+                    margin-top: 1rem;
+                    padding: .5rem;
+                    width: 19.5rem;
+                }
+                
+            }
+            .message{
+                input{
+                    margin-top: 1rem;
+                    padding: .5rem;
+                    width: 19.5rem;
+                    height: 10rem;
+                }
+                
+            }
+            .checkbox{
+                margin-top: 1rem;
+                display: flex;
+                gap: 1rem;
+            }
+            .button_send{
+                margin-top: 1rem;
+                background-color: black;
+                padding: .5rem;
+                a{
+                    text-decoration: none;
+                    color: red;
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+            input{
+                display: flex;
+
+                justify-content: left;
+            }
+        }
     }
-  }
-  .login_wrapper{
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-
-  }
-  .login_wrapper h1{
-    margin-top: 5rem;
-  }
-  .box_login{
-    margin-top: 1rem;
-    /* background-color: black; */
-    color: black;
-    width: 30rem;
-    height: 20rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    display: flex;
-    align-items: center;
-    flex-direction: column ;
-    margin: auto;
-    
-  }
-  input{
-    padding: .5rem;
-    width: 15rem;
-  }
-  label{
-    margin-top: 1rem;
-  }
-  button{
-    margin-top: 1rem;
-    padding: 1rem;
-
-  }
-  button:hover{
-    background: white;
-    color: red;
-  }
-  a{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  
-  </style>
+</style>

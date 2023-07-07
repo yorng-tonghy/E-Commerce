@@ -41,12 +41,15 @@
                       <li>
                         <a href="#"><router-link to="/detail">Detail</router-link></a>
                       </li>
+                      <li>
+                        <a href="#"><router-link to="/contact">Contact</router-link></a>
+                      </li>
                      
   
                   </ul>
               </div>
               <div class="header__cart">
-                  <i class='bx bxs-cart'></i>
+                <router-link to="/cart"><i class='bx bxs-cart'></i></router-link>
               </div>
           </div>
       </section>

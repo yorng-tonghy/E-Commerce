@@ -1,12 +1,12 @@
 <template>
     <!DOCTYPE html>
   <html lang="en">
-  <head>
+    <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Home-Page-E-Commerce</title>
-      <!-- <link rel="stylesheet" href="style.css"> -->
+      <link rel="stylesheet" href="style.css">
       <!-- box-icon link -->
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
       <!-- swiper link  -->
@@ -24,22 +24,24 @@
               </div>
               <div class="header__nav_item">
                   <ul>
-                    <li>
-                        <a href="#"><router-link to="/">Home</router-link></a>
+                      <li>
+                          <a href="#"><router-link to="/">Home</router-link></a>
                       </li>
                       <!-- <li>
                           <a href="#"><router-link to="./Checkout.vue">Shop</router-link></a>
                       </li><li>
                           <a href="#"><router-link to="./Checkout.vue">Blog</router-link></a>
-                      </li>
-                      <li>
+                      </li><li>
                           <a href="#"><router-link to="./AboutView.vue">About</router-link></a>
                       </li> -->
                       <li>
-                          <a href="#"><router-link to="/landing">Landing</router-link></a>
+                        <a href="#"><router-link to="/landing">Landing</router-link></a>
                       </li>
                       <li>
                         <a href="#"><router-link to="/detail">Detail</router-link></a>
+                      </li>
+                      <li>
+                        <a href="#"><router-link to="/contact">Contact</router-link></a>
                       </li>
                      
   
@@ -62,7 +64,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nisi cupiditate, sunt veritatis repellendus iure tempora omnis, labore dolor aut eum necessitatibus tenetur voluptatibus corrupti quisquam neque ipsa nam molestias!</p>
             </div>
             <div class="image">
-                <!-- <img src="../assets/img/image 16.png" alt=""> -->
+                <img src="https://www.pngall.com/wp-content/uploads/13/Nike-Shoes-Air-Max-PNG-Images.png" alt="">
             </div>
             <div class="signup_button">
                 <a href="#">Sign Up</a>
@@ -96,31 +98,31 @@
             <div class="wrapperBox 1">
                 <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <!-- <img src="../assets/img/Rectangle 94.png" alt=""> -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg" alt="">
                 <p>Jannie Suffer</p>
             </div>
             <div class="wrapperBox 2">
                 <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <!-- <img src="../assets/img/Rectangle 94.png" alt=""> -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg" alt="">
                 <p>Jannie Suffer</p>
             </div>
             <div class="wrapperBox 3">
                 <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <!-- <img src="../assets/img/Rectangle 94.png" alt=""> -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg" alt="">
                 <p>Jannie Suffer</p>
             </div>
             <div class="wrapperBox 4">
                 <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <!-- <img src="../assets/img/Rectangle 94.png" alt=""> -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg" alt="">
                 <p>Jannie Suffer</p>
             </div>
         </div>
      </div>
      <!-- advertise -->
-     <!-- <div class="advertise_section">
+     <div class="advertise_section">
         <div class="advertise_wrapper">
             <div class="advertise_left">
                 <h3>What it's like </h3>
@@ -130,10 +132,25 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quis vitae cumque asperiores quidem autem similique eum provident aperiam repellat qui omnis, repellendus voluptates blanditiis obcaecati eaque! Voluptas, soluta cum.</p>
             </div>
             <div class="advertise_right">
-                <iframe src="https://www.youtube.com" frameborder="1"></iframe>
+                <iframe src="https://www.youtube.com/watch?v=h61uA37aasc" frameborder="1"></iframe>
             </div>
         </div>
-     </div> -->
+     </div>
+     <!-- Sponsor -->
+     <div class="sponsor_section">
+        <div class="sponsor_wrapper">
+            <div class="s_title">
+                <p>Social Logo</p>
+            </div>
+            <div class="logos">
+                <img src="https://companieslogo.com/img/orig/AMZN-e9f942e4.png?t=1632523695" alt="">
+                <img src="https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png" alt="">
+                <img src="https://1.bp.blogspot.com/-jmbupY40a_U/XXPTcAY6wsI/AAAAAAAABQI/sS8H5XgJHNQURQ-IjVXevn-kLm-l9AkeACLcBGAs/s1600/logo-j%2526t-express-vector-idngrafis.png" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="">
+            </div>
+        </div>
+     </div>
       <!-- -------footer section------ -->
       <section class="footer__section">
           <div class="footer__wrapper">
@@ -221,6 +238,9 @@
   <style lang="scss">
   
   @media (min-width: 1024px) {
+    .header_cart{
+        background-color: none;
+    }
     .home {
       min-height: 100vh;
       display: flex;
@@ -285,10 +305,13 @@
     }
     .image{
         position: absolute;
-        right: .5rem;
-        top: 2rem;
-        width: 993px;
-        height: 663px;
+        display: flex;
+        justify-content: center;
+        right: .01rem;
+        bottom: .2rem;
+        width: 900px;
+        height: 700px;
+        // border: 1px solid black;
     }
   }
 //   signup section
@@ -343,20 +366,65 @@
     justify-content: center;
     .child_wrapper{
         display: flex;
-        gap: 1rem;
+        gap: .1rem;
         .wrapperBox{
             // border: 1px solid black;
+            margin-top: 3rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 250px;
-            height:400px;
+            height:250px;
             text-align: center;
-            
+            color: #736c78;
+            gap: 1rem;
+           
             img{
                 margin: auto;
-                width: 70px;
-                height: 70px;
+                width: 50px;
+                height: 50px;
+                font-size: .7rem;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.advertise_section{
+    margin-top: 10rem;
+    // border: 1px solid black;
+    display: flex;
+    
+   .advertise_wrapper{
+    height: 20rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .advertise_left{
+            width: 50%;
+        }
+   }
+}
+.sponsor_section{
+    .sponsor_wrapper{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        // border: 1px solid black;
+        .s_title{
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        .logos{
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            img{
+                width: 120px;
+                
+                object-fit: contain;
             }
         }
     }
