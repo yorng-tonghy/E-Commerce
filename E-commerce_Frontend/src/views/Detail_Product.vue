@@ -49,7 +49,10 @@
                   </ul>
               </div>
               <div class="header__cart">
-                <router-link to="/cart"><i class='bx bxs-cart'></i></router-link>
+                  <router-link to="/cart">Cart(0)</router-link>
+              </div>
+              <div class="login">
+                <router-link to="/login">Login</router-link>
               </div>
           </div>
       </section>

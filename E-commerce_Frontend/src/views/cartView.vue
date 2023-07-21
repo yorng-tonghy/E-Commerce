@@ -49,7 +49,10 @@
                   </ul>
               </div>
               <div class="header__cart">
-                  <i class='bx bxs-cart'></i>
+                  <router-link to="/cart">Cart(0)</router-link>
+              </div>
+              <div class="login">
+                <router-link to="/login">Login</router-link>
               </div>
           </div>
       </section>
@@ -142,7 +145,8 @@
                     </div>
                 </div>
                 <div class="checkout_button">
-                    <a href="#">Proceed to checkout</a>
+                    <router-link to="/checkout">Proceed to checkout</router-link>
+                    <!-- <a href="#"></a> -->
                 </div>
             </div>
         </div>

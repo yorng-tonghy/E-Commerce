@@ -4,14 +4,17 @@
     // align-items: center;
     .swiper-slide{
         display: flex;
-        gap: 10rem;
+        gap: 1rem;
         justify-content: center;
+        
         // margin-top: 10rem;
 
         .left_item_swipper{
             margin-top: 10rem;
+            width: 50%;
             .item_title{
                 color: orange;
+               
 
             }
             .item_model{
@@ -20,13 +23,15 @@
             }
             .item_desc{
                 margin-top: 5px;
+                width: 80%;
             }
             .item_button{
                 margin-top: 8px;
                 width: 200px;
                 height: 70px;
                 border: 1px solid black;
-                border-radius: 30px;
+                border-radius: 5px;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 display: flex;
                 justify-content: center;
                 align-items: center;

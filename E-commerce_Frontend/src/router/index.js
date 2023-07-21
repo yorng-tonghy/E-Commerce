@@ -18,11 +18,11 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/AboutView.vue"),
     },
-    {
-      path: "/product",
-      name: "product",
-      component: () => import("../views/Products.vue"),
-    },
+    // {
+    //   path: "/product",
+    //   name: "product",
+    //   component: () => import("../views/Products.vue"),
+    // },
     {
       path:"/detail",
       component: () => import("../views/Detail_Product.vue"),
@@ -42,7 +42,38 @@ const router = createRouter({
     {
       path:"/contact",
       component:()=> import("../views/contact.vue"),
+    },
+    {
+      path:"/admin",
+      component:()=> import("../views/Admin/Home.vue")
+    },
+    {
+      path:"/logout",
+      component:()=> import("../views/HomeView.vue")
     }
+    ,
+    {
+      path:"/contact_admin",
+      component:()=> import("../views/Admin/contactAdmin.vue")
+    }
+    ,
+    {
+      path:"/product",
+      component:()=> import("../views/Admin/product.vue")
+    }
+    ,
+    {
+      path:"/reciepts",
+      component:()=> import("../views/Admin/Reciept.vue")
+    },
+    {
+      path:"/signup",
+      component:()=> import("../views/signup.vue")
+    },
+    {
+       path:"/checkout",
+      component:()=> import("../views/Checkout.vue")
+    },
     
   ],
 });

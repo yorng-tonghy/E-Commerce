@@ -1,12 +1,12 @@
 <template>
     <!DOCTYPE html>
   <html lang="en">
-    <head>
+  <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Home-Page-E-Commerce</title>
-      <link rel="stylesheet" href="style.css">
+      <!-- <link rel="stylesheet" href="style.css"> -->
       <!-- box-icon link -->
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
       <!-- swiper link  -->
@@ -27,13 +27,6 @@
                       <li>
                           <a href="#"><router-link to="/">Home</router-link></a>
                       </li>
-                      <!-- <li>
-                          <a href="#"><router-link to="./Checkout.vue">Shop</router-link></a>
-                      </li><li>
-                          <a href="#"><router-link to="./Checkout.vue">Blog</router-link></a>
-                      </li><li>
-                          <a href="#"><router-link to="./AboutView.vue">About</router-link></a>
-                      </li> -->
                       <li>
                         <a href="#"><router-link to="/landing">Landing</router-link></a>
                       </li>
@@ -48,7 +41,7 @@
                   </ul>
               </div>
               <div class="header__cart">
-                  <i class='bx bxs-cart'></i>
+                  <router-link to="/cart">Cart(0)</router-link>
               </div>
               <div class="login">
                 <router-link to="/login">Login</router-link>
@@ -238,9 +231,7 @@
   <style lang="scss">
   
   @media (min-width: 1024px) {
-    .header_cart{
-        background-color: none;
-    }
+   
     .home {
       min-height: 100vh;
       display: flex;
@@ -431,8 +422,3 @@
 }
   
   </style>
-    <script setup>
-    
-  
-  
-  </script>

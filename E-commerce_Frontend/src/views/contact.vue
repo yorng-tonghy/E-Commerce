@@ -49,7 +49,10 @@
                   </ul>
               </div>
               <div class="header__cart">
-                  <i class='bx bxs-cart'></i>
+                  <router-link to="/cart">Cart(0)</router-link>
+              </div>
+              <div class="login">
+                <router-link to="/login">Login</router-link>
               </div>
           </div>
       </section>
@@ -80,7 +83,8 @@
                 <a href="">Send Message</a>
             </div>
         </div>
-
+      
+        
       </div>
      
 
@@ -168,13 +172,32 @@
   </template>
   
  <style lang="scss">
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
     .contact{
         display: flex;
+        gap: 3rem;
         align-items: center;
         // justify-content: center;
         // align-items: center;
         // border: 1px solid black;
         height: 100vh;
+        .right_wrapper{
+            border: 5px solid black;
+        }
         .contact_wrapper{
             display: flex;
             justify-content: center;
@@ -200,6 +223,7 @@
             }
             .telephone{
                 input{
+                    border: 1px solid black;
                     margin-top: 1rem;
                     padding: .5rem;
                     width: 19.5rem;
@@ -208,6 +232,7 @@
             }
             .message{
                 input{
+                    border: 1px solid black;
                     margin-top: 1rem;
                     padding: .5rem;
                     width: 19.5rem;
@@ -233,6 +258,7 @@
                 }
             }
             input{
+                border: 1px solid black;
                 display: flex;
 
                 justify-content: left;

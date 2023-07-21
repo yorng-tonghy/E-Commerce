@@ -16,7 +16,10 @@
   
   </head>
   <body>
-    
+    <!-- <div v-for="product in products">
+        <img :src="product.image" alt="">
+        {{ product.name }}
+    </div> -->
       <section class="header__section">
           <div class="header__wrapper">
               <div class="header__logo">
@@ -27,14 +30,6 @@
                       <li>
                           <a href="#"><router-link to="/home">Home</router-link></a>
                       </li>
-                      <!-- <li>
-                          <a href="#"><router-link to="./Checkout.vue">Shop</router-link></a>
-                      </li><li>
-                          <a href="#"><router-link to="./Checkout.vue">Blog</router-link></a>
-                      </li>
-                      <li>
-                          <a href="#"><router-link to="./AboutView.vue">About</router-link></a>
-                      </li> -->
                       <li>
                           <a href="#"><router-link to="/landing">Landing</router-link></a>
                       </li>
@@ -49,7 +44,7 @@
                   </ul>
               </div>
               <div class="header__cart">
-                  <router-link to="/cart"><i class='bx bxs-cart'></i></router-link>
+                  <router-link to="/cart">Cart(0)</router-link>
               </div>
               <div class="login">
                 <router-link to="/login">Login</router-link>
@@ -60,22 +55,21 @@
       <section class="swipper__section">
           <div class="swipper__wrapper">
               <!-- Slider main container -->
-      <div class="swiper">
+      <div class="swiper" >
       <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper" >
+        
         <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="left_item_swipper">
+        <div class="swiper-slide" v-for="product in products">
+          <div class="left_item_swipper" >
               <div class="item_title">
                   <p>Popular Product</p>
               </div>
               <div class="item_model">
-                  <p>Nike Jodan 1</p>
+                  <p>{{ product.name }}</p>
               </div>
               <div class="item_desc">
-                  <span>Sorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br>
-                  <span>Nunc vulputate libero et velit interdum, ac aliquet odio </span><br>
-                  <span>mattis</span>
+                  <span>{{ product.desc }}</span>
               </div>
               <div class="item_button">
                   <a href="#">ADD TO CART</a>
@@ -83,17 +77,17 @@
           </div>
           <div class="right_item_swipper">
               <div class="item_img">
-                  <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/87d7e901-4d08-4456-9d62-07e821aff45b/air-max-90-futura-womens-shoes-kvRZ4h.png" alt="">
+                <img :src="product.image" alt="">
               </div>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide" v-for="product in products">
           <div class="left_item_swipper">
               <div class="item_title">
                   <p>Popular Product</p>
               </div>
               <div class="item_model">
-                  <p>Nike Jodan 1</p>
+                  <p>{{ product.name }}</p>
               </div>
               <div class="item_desc">
                   <span>Sorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br>
@@ -106,7 +100,8 @@
           </div>
           <div class="right_item_swipper">
               <div class="item_img">
-                  <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/d685d1c0-5606-4258-8254-ee75ac855ac8/air-max-pre-day-womens-shoes-TNgd9M.png" alt="">
+                <img :src="product.image" alt="">
+            
               </div>
           </div>
         </div>
@@ -156,17 +151,22 @@
               <div class="container__desc">
                   <p>Summer collection New Modern Design</p>
               </div>
-              <div class="container__boxes">
-                  <div class="container--box">
-                      <div class="child__container--box" >
-                          <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/61e0434d-ce3d-4a5f-8d66-1059ef06e5a8/air-max-270-mens-shoes-KkLcGR.png" alt="">
-                      </div>
+            
+              <div class="container__boxes" >
+                  <div class="container--box" v-for="product in products">
+                    <router-link to="/detail">
+                        <div class="child__container--box" >
+                            <img :src="product.image" alt="">
+                          <!-- <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/61e0434d-ce3d-4a5f-8d66-1059ef06e5a8/air-max-270-mens-shoes-KkLcGR.png" alt=""> -->
+                        </div>
+                    </router-link>
+                      
                       <div class="child__container--box-type">
-                        <router-link to="/detail"><span>Nike</span></router-link>
+                        <span>{{product.name}}</span>
                           
                       </div>
                       <div class="child__container--box-title">
-                          <p><b>Nike Jodan 2</b></p>
+                          <p><b>{{ product.brand }}</b></p>
                       </div>
                       <div class="child__container--box-stars">
                           <i class='bx bxs-star'></i>
@@ -176,17 +176,17 @@
                           <i class='bx bxs-star'></i>
                       </div>
                       <div class="child__container--box-cash--cart">
-                          <p>100USD</p>
-                          <div class="cart">
-                              <i class='bx bx-cart'></i>
-                          </div>
+                          <p>{{ product.price }}</p>
+                          <router-link to="/cart">Add To Cart</router-link>
+                          
                       </div>
                   </div>
-                  
-  
               </div>
+             
           </div>
-         
+          <!-- <div class="test" v-for="product in products">
+                    {{ product.name }}
+        </div> -->
       </section>
       <!-- -------footer section------ -->
       <section class="footer__section">
@@ -274,14 +274,14 @@
   <!-- <script src="../js/swiper"></script> -->
   <style lang="scss">
   
-  @media (min-width: 1024px) {
-    .home {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
+//   @media (min-width: 1024px) {
+//     .home {
+//       min-height: 100vh;
+//       display: flex;
+//       align-items: center;
+//     }
     
-  }
+//   }
   .login{
    
     a{
@@ -293,10 +293,31 @@
   .login a:hover{
     color: red;
   }
+  .container__boxes{
+    display: flex;
+    // grid-auto-columns: auto;
+  }
+  
   
   </style>
-    <script setup>
-    
+<script>
+    import axios from 'axios';
+    import {ref} from 'vue'
+
+export default{
+    data(){
+        return {
+            products: undefined
+        }
+    },
+      mounted() {
+        axios.get("http://localhost:9000/products")
+        .then(res => {
+            this.products = res.data
+            console.log(this.products);
+        })
+      },
+    }
   
   
-  </script>
+</script>

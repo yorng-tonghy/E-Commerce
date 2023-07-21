@@ -1,6 +1,8 @@
 .container__shoes{
     margin-top: 10rem;
     .container__wrapper{
+        // border: 2px solid black;
+        
         .container__title{
             display: flex;
             justify-content: center;
@@ -13,41 +15,48 @@
 
         }
         .container__boxes{
-           
-           margin-top: 5rem;
+            margin-top: 5rem;
             display: grid;
             grid-template-columns: auto auto auto auto;
-            gap: 20px;
+            grid-gap: 3rem;
             width: 100%;
             justify-content: center;
-            
+            // grid-auto-rows: 400px;
         
             .container--box{
                 width: 250px;
+                background: rgb(0, 0, 0);
+                padding: 10px;
+                max-width: 250px;
+                max-width: 250px;
+                width: 250px;
                 height: 320px;
-                background-color: grey;
+                background-color: rgb(0, 0, 0);
+                color: white;
                 padding: 10px ;
-                // display: flex;
+                display: flex;
                 justify-content: center;
-                border-radius: 20px;
-                // flex-direction: column;
+                // border-radius: 20px;
+                flex-direction: column;
                 position: relative;
                 transition: .5s;
-                // box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-                &:hover{
-                    transform: scale(1.1);
-                }
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
                
+               a{
                 .child__container--box{
+                    
                     width: 240px;
                     height: 165px;
                     background-color: white;
                     // padding: 2px 2px 0px 2px;
-                    border-radius: 20px;
+                    // border-radius: 20px;
                     overflow: hidden;
                     padding: 3px;
                     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-                    // transition: .3s;
+                    transition: .3s;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
                     
                     
                     
@@ -61,6 +70,8 @@
                     }
 
                 }
+               }
+                
                 .child__container--box-type{
                     // margin-top: 50rem;
                     margin-top: 1rem;
@@ -95,12 +106,16 @@
                 .child__container--box-cash--cart{
                     margin-top: .5rem;
                     margin-left: .5rem;
-                    // display: flex;
-                    // gap: 8rem;
+                    display: flex;
+                    gap: 6rem;  
                     // justify-content: space-around;
-                    p{
+                    a{
                         
                         color: white;
+                        text-decoration: none;
+                        &:hover{
+                            color: red;
+                        }
                     }
                     align-items: center;
                     .cart{
@@ -129,3 +144,24 @@
         }
     }
 }
+
+// .container__shoes {
+//     width: 100%;
+//     .container__wrapper {
+//         width: 100%;
+//         .container__boxes {
+//             background: red;
+//             display: flex;
+//             width: 100%;
+//             .container--box {
+//                 width: 250px;
+//                 background: gray;
+//                 .child__container--box {
+//                     img {
+//                         width: 200px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
