@@ -24,7 +24,7 @@ const PopularTable = new table({
         type:String,
         require:true
     },
-    star:{
+    desc:{
         type:String,
         require:true
     },

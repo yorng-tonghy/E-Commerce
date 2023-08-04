@@ -29,24 +29,20 @@
                           <a href="#"><router-link to="/">Home</router-link></a>
                       </li>
                       <li>
-                        <a href="#"><router-link to="/landing">Landing</router-link></a>
-                      </li>
-                      <li>
-                        <a href="#"><router-link to="/detail">Detail</router-link></a>
+                          <a href="#"><router-link to="/landing">Landing</router-link></a>
                       </li>
                       <li>
                         <a href="#"><router-link to="/contact">Contact</router-link></a>
                       </li>
-                     
-  
                   </ul>
               </div>
               <div class="header__cart">
-                  <router-link to="/cart">Cart(0)</router-link>
+                   <ul>
+                        <router-link to="/cart">Cart</router-link>
+                        <router-link to="/login">Login</router-link>
+                   </ul> 
               </div>
-              <div class="login">
-                <router-link to="/login">Login</router-link>
-              </div>
+             
           </div>
       </section>
       <div class="main_wrapper">

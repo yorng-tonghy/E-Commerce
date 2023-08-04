@@ -74,6 +74,10 @@ const router = createRouter({
        path:"/checkout",
       component:()=> import("../views/Checkout.vue")
     },
+    {
+      path:"/addNewProduct",
+      component:()=> import("../views/Admin/AddNewProduct.vue")
+    },
     
   ],
 });

@@ -11,7 +11,7 @@
       <!-- box-icon link -->
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
       <!-- swiper link  -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/> -->
   
   
   
@@ -56,98 +56,22 @@
         <router-link to="/login">Back to Login</router-link>
         
             <div class="box_login">
-                <label for="name">Name:</label>
-                <input type="text">
-                <label for="email">Email:</label>
-                <input type="email" id="email"><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password">
-                <router-link to="/login"><button type="submit" value="submit" id="login">Sign Up</button></router-link>
+              <form method="POST" @submit.prevent="sendPost">
+                <div class="myform">
+                  <label for="name">Name:</label><br>
+                  <input type="text" v-model="users.name"><br>  
+                  <label for="email">Email:</label><br>
+                  <input type="email" v-model="users.email"><br>
+                  <label for="password">Password:</label><br>
+                  <input type="password" v-model="users.pwd"><br>
+                  <button>SignUp</button>
+                </div>
+                
+              </form>
+               
                 
             </div>
       </div>
-            
-     
-
-
-      <!-- -------footer section------ -->
-      <!-- <section class="footer__section">
-          <div class="footer__wrapper">
-              <div class="item1">
-                  <div class="footer_logo">
-                      <h1>NIKEEE</h1>
-                  </div>
-                  <div class="footer_contact">
-                      <p>Contact</p>
-                  </div>
-                  <div class="footer_address">
-                      <p>Address: 210 road,Street 30, PhnomPenh</p>
-                  </div>
-                  <div class="footer_phone">
-                      <p>Phone: +855012312322</p>
-                  </div>
-                  <div class="footer_time">
-                      <p>Hours: 8:00-20:00, Mon-Fri</p>
-                  </div>
-              </div>
-              <div class="item2">
-                  <p><a href="#">About</a></p>
-                  <p><a href="#">About Us</a></p>
-                  <p><a href="#">Privacy Policy</a></p>
-                  <p><a href="#">Term & Condition</a></p>
-                  <p><a href="#">Contact Us</a></p>
-  
-              </div>
-              <div class="item3">
-                  <p><a href="#">My Account</a></p>
-                  <p><a href="#">Sign In</a></p>
-                  <p><a href="#">View Cart</a></p>
-                  <p><a href="#">Track My Order</a></p>
-                  <p><a href="#">Help</a></p>
-  
-              </div>
-              <div class="item4">
-                  <div class="app">
-                      <p>Install App</p>
-                  </div>
-                  <div class="app_desc">
-                      <p>From App Store or Google Play</p>
-                  </div>
-                  <div class="app_box_wrapper">
-                      <div class="appStore_box">
-                          <div class="appStore_logo">
-                              <i class='bx bxl-apple' ></i>
-                          </div>
-                          <div class="appStore_text_wrapper">
-                              <p>Download on the</p>
-                              <p><b>App Store</b></p>
-                          </div>
-                      </div>
-                      <div class="playStore_box">
-                          <div class="playStore_logo">
-                              <i class='bx bxl-play-store' ></i>
-                          </div>
-                          <div class="playStore_text">
-                              <p><b>GooglePlay</b></p>
-                          </div>
-                      </div>
-                  </div>
-                <div class="payment_wrapper">
-                  <div class="payment_text">
-                      <p>Secured Payment Gateways</p>
-                  </div>
-                  <div class="payment_logo">
-                      <img src="https://i.pinimg.com/originals/e2/33/f5/e233f5b0c5a358449398f202b03f063a.jpg" alt="">
-                      <img src="https://play-lh.googleusercontent.com/-deHHbwBUh2I4dzTjq9n4ggBGPqJwKzj9pwvPqyaR-hPxzKN9QVJOBsZP_ShlCDmX60" alt="">
-                      <img src="https://www.acledabank.com.kh/kh/assets/download_material/download-logo-icon.png" alt="">
-                      <img src="https://play-lh.googleusercontent.com/lKebetEHVDuBrbq5KJJ4MK6V6BaFuo0Mj9Qy9YZkoenrEDZVU-IzLrbAuoKMaCT4nA" alt="">
-                  </div>
-                </div>
-              </div>
-          </div>
-      </section> -->
-      <component is="script" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"  async></component>
-      <component is="script" src="../js/swiper" async></component>
   </body>
   </html>
   
@@ -177,7 +101,7 @@
     /* background-color: black; */
     color: black;
     width: 30rem;
-    height: 25rem;
+    height: 35rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     align-items: center;
@@ -205,17 +129,54 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+  .myform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
   
   </style>
 <script>
-//  const email = document.getElementById('email')
-// const password= document.getElementById('password')
-// const login= document.getElementById('login')
+import axios from 'axios';
+// import { response } from 'express';
+import {ref} from 'vue';
+// import VueAxios from 'vue-axios';
+export default{
+  data(){
+    return {
+      users: {
+          name:null,
+          email:null,
+          pwd:null,
+          
 
-//  if (email.value == "admin" && password.value == "admin" ){
-//     // window.location.assign("../views/admin/Home.vue")
-//     alert('login successfully')
-//  }
+      }
+    };
+  },
+  methods:{
+    sendPost(){
+      // const userData={
+      //     "name":this.name,
+      //     "pwd":this.pwd,
+      //     "email":this.email,
+      // }
+      // const postData = { name: this.name, pwd: this.pwd };
+      axios.post("http://localhost:9000/users",this.users)
+     .then(response=>{
+        console.log(response.data)
+     })
+     .catch(error=>{
+        console.log(error)
+     })
+
+     
+    }
+  }
+}
+    
+
+  
 
 </script>

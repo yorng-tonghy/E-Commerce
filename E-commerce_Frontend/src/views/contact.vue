@@ -18,7 +18,7 @@
   </head>
   <body>
     <!---------- Header Section ------ -->
-      <section class="header__section">
+    <section class="header__section">
           <div class="header__wrapper">
               <div class="header__logo">
                   <h2>NIKEEE</h2>
@@ -28,32 +28,21 @@
                       <li>
                           <a href="#"><router-link to="/">Home</router-link></a>
                       </li>
-                      <!-- <li>
-                          <a href="#"><router-link to="./Checkout.vue">Shop</router-link></a>
-                      </li><li>
-                          <a href="#"><router-link to="./Checkout.vue">Blog</router-link></a>
-                      </li><li>
-                          <a href="#"><router-link to="./AboutView.vue">About</router-link></a>
-                      </li> -->
                       <li>
-                        <a href="#"><router-link to="/landing">Landing</router-link></a>
-                      </li>
-                      <li>
-                        <a href="#"><router-link to="/detail">Detail</router-link></a>
+                          <a href="#"><router-link to="/landing">Landing</router-link></a>
                       </li>
                       <li>
                         <a href="#"><router-link to="/contact">Contact</router-link></a>
                       </li>
-                     
-  
                   </ul>
               </div>
               <div class="header__cart">
-                  <router-link to="/cart">Cart(0)</router-link>
+                   <ul>
+                        <router-link to="/cart">Cart</router-link>
+                        <router-link to="/login">Login</router-link>
+                   </ul> 
               </div>
-              <div class="login">
-                <router-link to="/login">Login</router-link>
-              </div>
+             
           </div>
       </section>
       <!-- contact -->
@@ -65,23 +54,26 @@
             <div class="contact_desc">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo accusamus dolor explicabo sint. Asperiores totam architecto harum? Quis minus eos, exercitationem quibusdam quaerat accusantium, suscipit dolorum quos animi repellendus illo.</p>
             </div>
-            <div class="name_email">
-                <input type="name" placeholder="NAME">
-                <input type="email" placeholder="EMAIL">
+            <form method="POST" @submit.prevent="sendPost1">
+                <div class="name_email">
+                <input type="name" placeholder="NAME" v-model="contacts.name">
+                <input type="email" placeholder="EMAIL" v-model="contacts.email">
             </div>
             <div class="telephone">
-                <input type="phone" placeholder="TELEPHONE">
+                <input type="phone" placeholder="TELEPHONE" v-model="contacts.phone">
             </div>
             <div class="message">
-                <input type="text" placeholder="MESSAGE">
+                <input type="text" placeholder="MESSAGE" v-model="contacts.message">
             </div>
-            <div class="checkbox">
+            <!-- <div class="checkbox">
                 <input type="checkbox">
                 <p>I accept Bio's Privacy Policy</p>
-            </div>
+            </div> -->
             <div class="button_send">
-                <a href="">Send Message</a>
+             <button>Send Message</button>
             </div>
+            </form>
+        
         </div>
       
         
@@ -170,6 +162,40 @@
   </html>
   
   </template>
+<script>
+    import axios from 'axios';
+// import { response } from 'express';
+import {ref} from 'vue';
+// import VueAxios from 'vue-axios';
+export default{
+  data(){
+    return {
+      contacts: {
+          name:null,
+          email:null,
+          phone:null,
+          message:null,
+          
+
+      }
+    };
+  },
+  methods:{
+    sendPost1(){
+      axios.post("http://localhost:9000/contacts",this.contacts)
+     .then(response=>{
+        console.log(response.data)
+     })
+     .catch(error=>{
+        console.log(error)
+     })
+
+     
+    }
+  }
+}
+
+</script>
   
  <style lang="scss">
  table {
@@ -243,11 +269,14 @@ tr:nth-child(even) {
             .checkbox{
                 margin-top: 1rem;
                 display: flex;
-                gap: 1rem;
+                gap: .3rem;
+                align-items: center;
+                // justify-content: center;
             }
             .button_send{
+                width: 7rem;
                 margin-top: 1rem;
-                background-color: black;
+                // background-color: black;
                 padding: .5rem;
                 a{
                     text-decoration: none;

@@ -18,7 +18,7 @@
   </head>
   <body>
     <!---------- Header Section ------ -->
-      <section class="header__section">
+    <section class="header__section">
           <div class="header__wrapper">
               <div class="header__logo">
                   <h2>NIKEEE</h2>
@@ -28,26 +28,21 @@
                       <li>
                           <a href="#"><router-link to="/">Home</router-link></a>
                       </li>
-                      <!-- <li>
-                          <a href="#"><router-link to="./Checkout.vue">Shop</router-link></a>
-                      </li><li>
-                          <a href="#"><router-link to="./Checkout.vue">Blog</router-link></a>
-                      </li><li>
-                          <a href="#"><router-link to="./AboutView.vue">About</router-link></a>
-                      </li> -->
                       <li>
-                        <a href="#"><router-link to="/landing">Landing</router-link></a>
+                          <a href="#"><router-link to="/landing">Landing</router-link></a>
                       </li>
                       <li>
-                        <a href="#"><router-link to="/detail">Detail</router-link></a>
+                        <a href="#"><router-link to="/contact">Contact</router-link></a>
                       </li>
-                     
-  
                   </ul>
               </div>
               <div class="header__cart">
-                  <i class='bx bxs-cart'></i>
+                   <ul>
+                        <router-link to="/cart">Cart</router-link>
+                        <router-link to="/login">Login</router-link>
+                   </ul> 
               </div>
+             
           </div>
       </section>
      

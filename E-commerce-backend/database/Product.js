@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const ProductTable = new Schema({
     id:{
         type: String,
-        required: true
+        required: false
     },
     brand:{
         type: String,
@@ -30,6 +30,27 @@ const ProductTable = new Schema({
     date: {
         type: String,
         default: Date.now()
-    }
+    },
+    imgFront:{
+        type:String,
+        require:true
+    },
+    imgBottom:{
+        type:String,
+        require:true
+    },
+    imgTop:{
+        type:String,
+        require:true
+    },
+    imgFar:{
+        type:String,
+        require:true
+    },
+    desc:{
+        type:String,
+        require:true
+    },
+
 });
 module.exports = mongoose.model('Product',ProductTable)

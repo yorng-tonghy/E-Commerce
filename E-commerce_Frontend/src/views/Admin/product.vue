@@ -16,7 +16,7 @@
         <div class="right_wrapper">
             <p>All Products</p>
             <div class="add_new">
-                <a href="#">Add New Product</a>
+                <router-link to="/addNewProduct"><a href="">Add New Product</a></router-link>
             </div>
             <table >
                 <tr>
@@ -36,7 +36,7 @@
                     <td>
                         <div class="edit">
                             <a href="#" class="edit_">Edit</a>
-                            <a href="#" class="delete_">Delete</a>
+                            <a href="#" class="delete_" @click="() => removeProduct(product._id)">Delete</a>
                         </div>
                     </td>
                 </tr>
@@ -140,6 +140,8 @@
         width: 15rem;
         height: 100vh;
         align-items: space-around;
+        position: sticky;
+        top: 0;
         .contents{
             margin-top: 3rem;
             gap: 3rem;
@@ -175,17 +177,22 @@
                 &:hover{
                     color: red;
                 }
-
             }
         }
     }
 }
 </style>
 <script>
-        import axios from 'axios';
+    import axios from 'axios';
     import {ref} from 'vue'
 
 export default{
+    methods: {
+        removeProduct(id) {
+            axios.delete(`http://localhost:9000/products/${id}`);
+            window.location.href = "/product";
+        }
+    },
     data(){
         return {
             products: undefined
@@ -194,7 +201,7 @@ export default{
       mounted() {
         axios.get("http://localhost:9000/products")
         .then(res => {
-            this.products = res.data
+            this.products = res.data;
             console.log(this.products);
         })
       },

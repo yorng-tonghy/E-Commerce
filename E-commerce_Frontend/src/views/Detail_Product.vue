@@ -18,7 +18,7 @@
   </head>
   <body>
     <!---------- Header Section ------ -->
-      <section class="header__section">
+    <section class="header__section">
           <div class="header__wrapper">
               <div class="header__logo">
                   <h2>NIKEEE</h2>
@@ -28,32 +28,21 @@
                       <li>
                           <a href="#"><router-link to="/">Home</router-link></a>
                       </li>
-                      <!-- <li>
-                          <a href="#"><router-link to="./Checkout.vue">Shop</router-link></a>
-                      </li><li>
-                          <a href="#"><router-link to="./Checkout.vue">Blog</router-link></a>
-                      </li><li>
-                          <a href="#"><router-link to="./AboutView.vue">About</router-link></a>
-                      </li> -->
                       <li>
-                        <a href="#"><router-link to="/landing">Landing</router-link></a>
-                      </li>
-                      <li>
-                        <a href="#"><router-link to="/detail">Detail</router-link></a>
+                          <a href="#"><router-link to="/landing">Landing</router-link></a>
                       </li>
                       <li>
                         <a href="#"><router-link to="/contact">Contact</router-link></a>
                       </li>
-                     
-  
                   </ul>
               </div>
               <div class="header__cart">
-                  <router-link to="/cart">Cart(0)</router-link>
+                   <ul>
+                        <router-link to="/cart">Cart</router-link>
+                        <router-link to="/login">Login</router-link>
+                   </ul> 
               </div>
-              <div class="login">
-                <router-link to="/login">Login</router-link>
-              </div>
+             
           </div>
       </section>
       <!-------- body Section  ---------->
@@ -62,22 +51,22 @@
                 <!-- ======left side====== -->
                 <div class="left_side">
                     <div class="top_box">
-                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d62406e8-c459-4d3e-99bb-554c4e99f81e/lebron-20-basketball-shoes-ct1qVm.png" alt="">
+                        <img :src="product.image" alt="">
                     </div>
                     <div class="box_row_1">
                         <div class="box 1">
-                            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5aea23a7-3d5b-4d6b-9b63-64cd9b34977c/lebron-20-basketball-shoes-ct1qVm.png" alt="">
+                            <img :src="product.imgFront" alt="">
                         </div>
                         <div class="box 2">
-                            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/689eacac-2d27-40f6-923c-6e6af4581255/lebron-20-basketball-shoes-ct1qVm.png" alt="">
+                            <img :src="product.imgBottom" alt="">
                         </div>
                     </div>
                     <div class="box_row_2">
                         <div class="box 1">
-                            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1c5c0284-2f2b-48ab-8f2e-21eaac26b710/lebron-20-basketball-shoes-ct1qVm.png" alt="">
+                            <img :src="product.imgFar" alt="">
                         </div>
                         <div class="box 2">
-                            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7a197666-4e8e-4e45-89ed-363b4c3818a0/lebron-20-basketball-shoes-ct1qVm.png" alt="">
+                            <img :src="product.imgTop" alt="">
                         </div>
                     </div>
                 </div>
@@ -90,10 +79,10 @@
                         <p>Home/Shoes</p>
                     </div>
                     <div class="type">
-                        <p>Air Jordan 1 Retro High OG</p>
+                        <p>{{product.name}}</p>
                     </div>
                     <div class="price">
-                        <p>100 USD</p>
+                        <p>{{product.price}}</p>
                     </div>
                     <select name="" id="">
                         <option value="">M 3.5 / W 5</option>
@@ -105,7 +94,7 @@
                     </div>
                     <div class="desc">
                         <b>Product Details</b><br>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab voluptatibus, modi ea dolorum a autem harum odit rerum at velit qui, ullam quisquam maxime quibusdam deleniti, accusantium suscipit voluptas error!</p>
+                        <p>{{product.desc}}</p>
                     </div>
                 </div>
 
@@ -114,40 +103,7 @@
         
 
         </div>
-            <!-- ----------container Section--------- -->
-            <!-- <div class="title">
-                <h4>You might also like</h4>
-            </div>
-            <div class="container__boxes">
-                  <div class="container--box">
-                      <div class="child__container--box" >
-                          <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/61e0434d-ce3d-4a5f-8d66-1059ef06e5a8/air-max-270-mens-shoes-KkLcGR.png" alt="">
-                      </div>
-                      <div class="child__container--box-type">
-                        <router-link to="/detail"><span>Nike</span></router-link>
-                      </div>
-                      <div class="child__container--box-title">
-                          <p><b>Nike Jodan 2</b></p>
-                      </div>
-                      <div class="child__container--box-stars">
-                          <i class='bx bxs-star'></i>
-                          <i class='bx bxs-star'></i>
-                          <i class='bx bxs-star'></i>
-                          <i class='bx bxs-star'></i>
-                          <i class='bx bxs-star'></i>
-                      </div>
-                      <div class="child__container--box-cash--cart">
-                          <p>100USD</p>
-                          <div class="cart">
-                              <i class='bx bx-cart'></i>
-                          </div>
-                      </div>
-                  </div>
-
-                </div> -->
-     
-
-
+           
       <!-- -------footer section------ -->
       <section class="footer__section">
           <div class="footer__wrapper">
@@ -224,8 +180,6 @@
               </div>
           </div>
       </section>
-      <component is="script" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"  async></component>
-      <component is="script" src="../js/swiper" async></component>
   </body>
   </html>
   
@@ -349,3 +303,26 @@
 
  }
   </style>
+
+  <script>
+    import axios from 'axios';
+    import {ref} from 'vue'
+
+export default{
+    data(){
+        return {
+            product: {
+                image: ''
+            }
+        }
+    },
+      mounted() {
+        axios.get("http://localhost:9000/detail/"+localStorage.getItem('selectedItem'))
+        .then(res => {
+            this.product = res.data
+            console.log(this.product);
+        })
+      },
+    }
+
+</script>

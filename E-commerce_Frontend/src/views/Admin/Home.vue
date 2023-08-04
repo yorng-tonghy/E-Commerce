@@ -16,13 +16,14 @@
 
 <style lang="scss">
 .left_side{
-    height: 100vh;
+    // height: 100vh;
     .left_side_wrapper{
         background-color: black;
         color: white;
         width: 15rem;
         height: 100vh;
         // align-items: space-around;
+        border: 1px solid black;
         .contents{
             margin-top: 3rem;
             gap: 3rem;

@@ -17,7 +17,7 @@
   </head>
   <body>
     
-      <section class="header__section">
+    <section class="header__section">
           <div class="header__wrapper">
               <div class="header__logo">
                   <h2>NIKEEE</h2>
@@ -28,24 +28,20 @@
                           <a href="#"><router-link to="/">Home</router-link></a>
                       </li>
                       <li>
-                        <a href="#"><router-link to="/landing">Landing</router-link></a>
-                      </li>
-                      <li>
-                        <a href="#"><router-link to="/detail">Detail</router-link></a>
+                          <a href="#"><router-link to="/landing">Landing</router-link></a>
                       </li>
                       <li>
                         <a href="#"><router-link to="/contact">Contact</router-link></a>
                       </li>
-                     
-  
                   </ul>
               </div>
               <div class="header__cart">
-                  <router-link to="/cart">Cart(0)</router-link>
+                   <ul>
+                        <router-link to="/cart">Cart</router-link>
+                        <router-link to="/login">Login</router-link>
+                   </ul> 
               </div>
-              <div class="login">
-                <router-link to="/login">Login</router-link>
-              </div>
+             
           </div>
       </section>
      <!-- body -->
@@ -57,10 +53,11 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nisi cupiditate, sunt veritatis repellendus iure tempora omnis, labore dolor aut eum necessitatibus tenetur voluptatibus corrupti quisquam neque ipsa nam molestias!</p>
             </div>
             <div class="image">
-                <img src="https://www.pngall.com/wp-content/uploads/13/Nike-Shoes-Air-Max-PNG-Images.png" alt="">
+                <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1f9cfa8c-bedc-47f1-b5e9-762255331ab0/air-jordan-1-low-flyease-mens-easy-on-off-shoes-D3wW7l.png" alt="">
+                <!-- <img src="https://www.pngall.com/wp-content/uploads/13/Nike-Shoes-Air-Max-PNG-Images.png" alt=""> -->
             </div>
             <div class="signup_button">
-                <a href="#">Sign Up</a>
+                <a href="#"><router-link to="/signup">Sign Up</router-link></a>
             </div>
         </div>
      </div>
@@ -74,44 +71,11 @@
             <div class="insert">
                 <input type="email" placeholder="Your Email Address">
                 <div class="box_insert">
-                    <a href="#">Sign Up</a>
+                    <a href="#"><router-link to="/signup">Sign Up</router-link></a>
                 </div>
             </div>
             
             
-        </div>
-     </div>
-     <!-- Client Review  -->
-     <div class="client_title">
-        <p>Client</p>
-        <p>Reviews</p>
-     </div>
-     <div class="wrapper_feedback">
-        <div class="child_wrapper">
-            <div class="wrapperBox 1">
-                <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg" alt="">
-                <p>Jannie Suffer</p>
-            </div>
-            <div class="wrapperBox 2">
-                <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg" alt="">
-                <p>Jannie Suffer</p>
-            </div>
-            <div class="wrapperBox 3">
-                <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg" alt="">
-                <p>Jannie Suffer</p>
-            </div>
-            <div class="wrapperBox 4">
-                <img src="https://static.thenounproject.com/png/81720-200.png" alt="">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro temporibus, nulla ratione atque quod culpa dolore repudiandae dolor placeat assumenda quam eum corporis illum suscipit in dolores voluptatum quibusdam. Possimus.</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg" alt="">
-                <p>Jannie Suffer</p>
-            </div>
         </div>
      </div>
      <!-- advertise -->
@@ -125,7 +89,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quis vitae cumque asperiores quidem autem similique eum provident aperiam repellat qui omnis, repellendus voluptates blanditiis obcaecati eaque! Voluptas, soluta cum.</p>
             </div>
             <div class="advertise_right">
-                <iframe src="https://www.youtube.com/watch?v=h61uA37aasc" frameborder="1"></iframe>
+                <img src="https://www.volusion.com/blog/content/images/2023/01/Business-Structure-Types.jpg" alt="">
             </div>
         </div>
      </div>
@@ -225,13 +189,12 @@
   </body>
   </html>
   </template>
-  
-  <!-- <script src=""></script> -->
-  <!-- <script src="../js/swiper"></script> -->
   <style lang="scss">
   
   @media (min-width: 1024px) {
-   
+    .header__wrapper{
+    z-index: 1000;
+}
     .home {
       min-height: 100vh;
       display: flex;
@@ -301,8 +264,23 @@
         right: .01rem;
         bottom: .2rem;
         width: 900px;
-        height: 700px;
+        height: 500px;
+      
+       
         // border: 1px solid black;
+        img{
+            height: 400px;
+            width: 400px;
+            object-fit: cover;
+            border-radius: 100%;
+           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+
+            // border-radius: 30px;
+                // border-bottom-right-radius: 300px;
+                // margin-left: 14.45rem;
+                // margin-bottom: 15rem;
+
+        }
     }
   }
 //   signup section
@@ -385,14 +363,31 @@
     margin-top: 10rem;
     // border: 1px solid black;
     display: flex;
+    justify-content: center;
     
    .advertise_wrapper{
-    height: 20rem;
+    width: 100%;
+        // height: 20rem;
+        padding: 20px;
+        // border: 1px solid black;
+        // gap: 10rem;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+        // margin-left: 20rem;
+        // margin: auto;
+        // background: rgb(241, 194, 194);
         .advertise_left{
-            width: 50%;
+            width: 400px;
+            margin-right: 20px;
+        }
+        .advertise_right{
+            img{
+                height: 300px;
+                // width: 50%;
+                // height: 50rem;
+                object-fit: contain;
+            }
         }
    }
 }

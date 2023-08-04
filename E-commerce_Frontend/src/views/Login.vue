@@ -232,6 +232,8 @@ export default{
       }else{
         alert("Please Sign Up First")
       }
+      // if(this.email==)
+
     }
   }
 }

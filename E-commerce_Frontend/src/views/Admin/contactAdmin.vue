@@ -17,24 +17,51 @@
             <p>All contacts</p>
             <table>
                 <tr>
-                    <td>No</td>
+                    
                     <td>Name</td>
                     <td>Email</td>
                     <td>Phone</td>
                     <td>Message</td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Jack</td>
-                    <td>Jack@yahoo.com</td>
-                    <td>0887654123</td>
-                    <td>Hello dear</td>
+                <tr v-for="contact in contacts">
+                    <td>{{ contact.name }}</td>
+                    
+                    <td>{{ contact.email }}</td>
+                    <td>{{ contact.phone }}</td>
+                    <td>{{ contact.message }}</td>
                 </tr>
             </table>
         </div>
     </div>
     
 </template>
+<script>
+import axios from 'axios';
+import {ref} from 'vue'
+
+export default{
+data(){
+    return {
+        // contacts: {
+        //     id:null,
+        //     name:null,
+        //     email:null,
+        //     phone:null,
+        //     message:null,
+        // }
+        contacts: []
+    }
+},
+  mounted() {
+    axios.get("http://localhost:9000/contacts")
+    .then(res => {
+        this.contacts = res.data
+        console.log(this.contacts);
+    })
+  },
+}
+
+</script>
 
 <style lang="scss">
 .main{
