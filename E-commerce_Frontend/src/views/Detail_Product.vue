@@ -317,7 +317,7 @@ export default{
         }
     },
       mounted() {
-        axios.get("http://localhost:9000/detail/"+localStorage.getItem('selectedItem'))
+        axios.get("https://nikee-commerce.onrender.com/detail/"+localStorage.getItem('selectedItem'))
         .then(res => {
             this.product = res.data
             console.log(this.product);

@@ -163,7 +163,7 @@ export default{
       //     "email":this.email,
       // }
       // const postData = { name: this.name, pwd: this.pwd };
-      axios.post("http://localhost:9000/users",this.users)
+      axios.post("https://nikee-commerce.onrender.com/users",this.users)
      .then(response=>{
         console.log(response.data)
      })

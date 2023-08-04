@@ -182,7 +182,7 @@ export default{
   },
   methods:{
     sendPost1(){
-      axios.post("http://localhost:9000/contacts",this.contacts)
+      axios.post("https://nikee-commerce.onrender.com/contacts",this.contacts)
      .then(response=>{
         console.log(response.data)
      })
